@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramayana Characters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&family=Philosopher&display=swap" rel="stylesheet">
+<style>
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-image: url('l.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      backdrop-filter: blur(3px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      color: #f7dc6f;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .text {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 1000px;
+  font-family: 'Philosopher', sans-serif;
+  animation: fadeInUp 1.5s ease;
+}
+
+.text h2, .text h3 {
+  font-family: 'Noto Serif Devanagari', serif;
+  color: #ffeaa7;
+  margin-bottom: 15px;
+}
+
+.text h2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.text h3 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #f9ca24;
+}
+
+
+    header p {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      color: #fdfefe;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .char-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .char-box:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .char-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      object-fit: cover;
+      border: 2px solid #f7dc6f;
+    }
+
+    .char-box h3 {
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fdfefe;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 30px #f7dc6f;
+    }
+
+    .modal-content img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #f39c12;
+      margin-bottom: 20px;
+    }
+
+    .modal-content h2 {
+      color: #6e2c00;
+    }
+
+    .modal-content p {
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #c0392b;
+    }
+
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #fefefe;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ramayana  The Legend
+    </h1>
+    <p>The Ramayana (रामायण) is one of the two major Sanskrit epics of ancient India, the other being the Mahabharata. It was composed by the sage Valmiki (वाल्मीकि) and consists of approximately 24,000 shlokas (verses) across 7 kāṇḍas (sections or books).
+
+        It is not just a story—it's a dhārmika grantha (धार्मिक ग्रन्थ), a spiritual and moral compass that teaches dharma (धर्म – righteous duty), karma (कर्म – action), bhakti (भक्ति – devotion), and mārdava (मार्दव – humility).
+        Explore the stories and values of the epic Ramayana through its most iconic characters.</p>
+  </header>
+
+  <div class="container">
+    <div class="char-box" onclick="openModal(0)">
+      <img src="ram.png" alt="Rama">
+      <h3>Rama</h3>
+    </div>
+    <div class="char-box" onclick="openModal(1)">
+      <img src="sita.jpg" alt="Sita">
+      <h3>Sita</h3>
+    </div>
+    <div class="char-box" onclick="openModal(2)">
+      <img src="hanuman.jpg" alt="Hanuman">
+      <h3>Hanuman</h3>
+    </div>
+    <div class="char-box" onclick="openModal(3)">
+      <img src="laksh.jpg" alt="Lakshmana">
+      <h3>Lakshmana</h3>
+    </div>
+    <div class="char-box" onclick="openModal(4)">
+      <img src="ravan.jpg" alt="Ravana">
+      <h3>Ravana</h3>
+    </div>
+  </div>
+
+  <div class="modal" id="characterModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="Character">
+      <h2 id="modalName"></h2>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+  <div class="text">
+    <h2>रामायणः नैतिकजीवनस्य दर्पणः अस्ति</h2>
+    <p>The Ramayana is not just a mythological tale; it's a mirror to our values and a blueprint for ethical living.
+    In the age of chaos and self-interest, Rama shows us how to live with grace, strength and sacrifice.</p>
+  
+    <h3>Structure of the Ramayana (रामायणस्य रचना)</h3>
+    <ul>
+      <li><b>बालकाण्ड:</b> Birth and childhood of Rama.</li>
+      <li><b>अयोध्याकाण्ड:</b> Life in Ayodhya before exile.</li>
+      <li><b>अरण्यकाण्ड:</b> Forest exile and Sita’s abduction.</li>
+      <li><b>किष्किन्धाकाण्ड:</b> Friendship with Sugriva and Hanuman.</li>
+      <li><b>सुन्दरकाण्ड:</b> Hanuman’s heroic journey to Lanka.</li>
+      <li><b>युद्धकाण्ड:</b> The great war against Ravana.</li>
+      <li><b>उत्तरकाण्ड:</b> Events after victory and Sita’s trial.</li>
+    </ul>
+  
+    <h3>Key Learnings (मुख्य शिक्षाः)</h3>
+    <ul>
+      <li><b>धर्मः:</b> Stand for righteousness even in adversity.</li>
+      <li><b>सत्यं:</b> Truth is eternal and non-negotiable.</li>
+      <li><b>त्यागः:</b> Greatness requires sacrifice.</li>
+      <li><b>भक्तिः:</b> Hanuman teaches us unconditional devotion.</li>
+      <li><b>स्त्रीशक्तिः:</b> Sita stands for strength, purity and courage.</li>
+      <li><b>अहंकारः पतनस्य कारणम्:</b> Ravana's downfall was due to ego.</li>
+      <li><b>मित्रता व निष्ठा:</b> Rama-Lakshmana-Hanuman exemplify loyalty.</li>
+    </ul>
+  
+    <h3>Sanskrit Shlokas (संस्कृत श्लोकाः)</h3>
+    <p><b>“सर्वे भवन्तु सुखिनः, सर्वे सन्तु निरामयाः।”</b><br>
+    May all be happy and free from illness.</p>
+  
+    <p><b>“धर्मो रक्षति रक्षितः।”</b><br>
+    Dharma protects those who protect it.</p>
+  
+    <p><b>“कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।”</b><br>
+    Do your duty without attachment to the outcome.</p>
+  </div>
+  
+
+  <footer>
+    <p>&copy; 2025 Ramayana Project | Designed with devotion</p>
+  </footer>
+
+  <script>
+    const characters = [
+      {
+        name: 'Rama',
+        desc: 'Lord Rama is the seventh avatar of Lord Vishnu, known for his righteousness, valor, and devotion to dharma. Rama embodies the virtues of truth, compassion, and bravery.Lord Rama was the son of King Dasharatha and Queen Kausalya, the king of Ayodhya. He is considered the seventh avatar of the god Vishnu and embodies virtues like duty, honor, and devotion. Rama is known for his unwavering commitment to his dharma (duty) and his exemplary relationship with his wife, Sita, and his brother, Lakshmana. Rama Parents                   King Dasharatha: A just and righteous ruler of Ayodhya, known for his devotion to dharma. He was blessed with four sons through his three wives, Kausalya, Kaikeyi, and Sumitra, Queen Kausalya: Ramas mother, she is a symbol of maternal love and nurturing. ',
+        img: 'ram.png'
+      },
+      {
+        name: 'Sita',
+        desc: 'Maa Sita is a central figure in the Hindu epic Ramayana, revered as the epitome of devotion and virtue. She is the wife of Lord Rama, the avatar of Vishnu, and is considered an avatar of Lakshmi, the goddess of wealth and prosperity. While Sita is often described as the daughter of the Earth goddess Bhumi, her parents in the Ramayana are King Janaka and Queen Sunayana of Mithila. Earth Daughter:Many versions of the Ramayana describe Sita as emerging from the earth when King Janaka was plowing as part of a Vedic ritual. She is considered a gift from the Earth goddess and is adopted by King Janaka. Divine Origin:Some texts describe Sita as the daughter of Bhumi (Earth) and others as the daughter of Vedavati, a celestial woman who immolated herself. King Janaka and Queen Sunayana, Maa Sita: A Symbol of Virtue and Devotion: Test of Chastity:Despite her purity and devotion, Sita is subjected to a fire test by Rama, which she passes, further solidifying her reputation as a virtuous woman. Enduring the Trial:Sita faces numerous hardships and trials during her lifetime, including her abduction by Ravana and her eventual return to Ayodhya with Rama. . ',
+        img: 'sita.jpg'
+      },
+      {
+        name: 'Hanuman',
+        desc: 'Hanuman is a central figure in Hinduism, a devout devotee of Rama, and is also considered the son of the wind god Vayu. He is depicted as a powerful, monkey-like figure with a deep commitment to dharma (righteousness) and is also seen as a representation of unwavering devotion and strength. Hanuman parents are Anjana, a Vanara (monkey) princess, and Kesari, also a Vanara, who is said to be a devotee of Shiva. Anjana:Hanuman mother was an apsara (celestial nymph) who was cursed to be reborn as a Vanara princess on Earth. She was granted redemption by giving birth to a powerful son. Kesari: Hanuman father was a Vanara, a powerful warrior, and a devotee of Lord Shiva. Vayu: While Kesari and Anjana are his earthly parents, Hanuman is also known as the son of the wind god, Vayu. Vayu role is significant in Hanuman conception, as he is believed to have imbued Anjana with divine power. Devotion to Rama: Hanuman is renowned for his unwavering devotion to Lord Rama and his willingness to serve him. Symbol of Strength and Courage: Hanuman is a powerful warrior, known for his strength, courage, and ability to overcome obstacles.  Representation of Dharma:Hanuman embodies dharma (righteousness) through his actions, always prioritizing the well-being of others and upholding moral values.  ',
+        img: 'hanuman.jpg'
+      },
+      {
+        name: 'Lakshmana',
+        desc: 'Lakshmana, in Hindu mythology, was the devoted younger brother of Rama, and twin brother of Shatrughna. He was the son of King Dasaratha and Queen Sumitra. Lakshmana was known for his unwavering loyalty and service to Rama and Sita during their exile, often depicted as the protector of both. He married Sita younger sister, Urmila, and had two sons, Angad and Chandraketu. Lakshmana Parents: King Dasaratha: A powerful and righteous king of Ayodhya. Queen Sumitra: One of Dasaratha three queens, and the mother of Lakshmana and Shatrughna. About Lakshmana: Devotion to Rama:Lakshmana was deeply devoted to Rama, even to the point of accompanying him into exile to protect him and Sita. Protector of Sita:He was known for his unwavering commitment to protecting Sita from harm. Ideal Brother:Lakshmana is often portrayed as the ideal younger brother, exemplifying loyalty, devotion, and selflessness..',
+        img: 'laksh.jpg'
+      },
+      {
+        name: 'Ravana',
+        desc: 'Ravana, a prominent figure in the Ramayana, was a king of demons with ten heads and twenty hands, known for his vast knowledge and power, but also for his arrogance and cruelty. His parents were Sage Vishrava, a wise and learned Brahmin, and Kaikesi, a rakshasi (demon) princess. Ravana is depicted as a complex character, both a powerful warrior and a skilled scholar, but ultimately consumed by ambition and pride, leading to his downfall.  Ravana Parents:Sage Vishrava:Vishrava was a great sage, son of the sage Pulastya, and known for his wisdom and devotion. Kaikesi:Kaikesi was the daughter of Sumali and Ketumati, and a rakshasi princess, known for her beauty and powerful magic. Ravana is often depicted with ten heads, though some accounts suggest he wasn not born with them. Knowledge and Skills: He was a brilliant scholar, well-versed in the Vedas, astrology, and even medicine. power and Ambition:Ravana was a powerful king, ruling Lanka, and possessed a chariot (Pushpak Vimana) and other magical artifacts. Abduction of Sita:Ravana is famous for abducting Sita, the wife of Lord Rama, which triggered the Ramayana events. Conflict with Rama:Ravana pride and desire for power led to conflict with Rama, ultimately resulting in Ravana defeat and death',
+        img: 'ravan.jpg'
+      }
+    ];
+
+    function openModal(index) {
+      const modal = document.getElementById('characterModal');
+      document.getElementById('modalName').innerText = characters[index].name;
+      document.getElementById('modalDesc').innerText = characters[index].desc;
+      document.getElementById('modalImg').src = characters[index].img;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('characterModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('characterModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+  <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+  <style>
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 8px;
+    z-index: 99;
+    border:#fdfefe;
+    outline: none;
+    background-color: #efe8cb;
+    color: black;
+    cursor:pointer; 
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  #topBtn:hover {
+    background-color: #e1b12c;
+  }
+  </style>
+  <script>
+  const topBtn = document.getElementById("topBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  </script>
+  
+</body>
+</html>
